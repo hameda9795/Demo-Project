@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Sun, Cloud, CloudRain, Droplets, Leaf } from "lucide-react";
 
 const sunFilters = [
-  { id: 'all', label: 'Alle' },
+  { id: 'all', label: 'Alle', icon: undefined },
   { id: 'zon', label: 'Zon', icon: Sun },
   { id: 'halfschaduw', label: 'Halfschaduw', icon: Cloud },
   { id: 'schaduw', label: 'Schaduw', icon: CloudRain },

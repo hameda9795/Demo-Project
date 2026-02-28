@@ -29,3 +29,5 @@ export const seasons = {
   herfst: { name: 'Herfst', color: '#d97706', filter: 'hue-rotate(30deg) saturate(1.3)' },
   winter: { name: 'Winter', color: '#0ea5e9', filter: 'grayscale(0.3) brightness(0.9)' },
 };
+
+export type Season = keyof typeof seasons;
