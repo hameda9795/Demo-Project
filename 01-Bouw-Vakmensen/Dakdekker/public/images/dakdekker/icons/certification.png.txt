@@ -1,0 +1,5 @@
+Placeholder for: certification.png
+Description: VCA certification placeholder
+Intended URL: https://via.placeholder.com/200x200/475569/ffffff?text=VCA
+
+Please manually download an appropriate image and save it as: certification.png

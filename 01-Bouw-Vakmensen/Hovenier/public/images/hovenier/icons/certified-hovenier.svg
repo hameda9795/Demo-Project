@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="#166534"/>
+    <text x="50" y="35" text-anchor="middle" fill="white" font-size="12" font-weight="bold">HOVENIER</text>
+    <text x="50" y="55" text-anchor="middle" fill="white" font-size="10">Gecertificeerd</text>
+    <text x="50" y="75" text-anchor="middle" fill="#4ade80" font-size="16">✓</text>
+  </svg>

@@ -1,0 +1,68 @@
+import { Project } from '@/types'
+
+export const projects: Project[] = [
+  {
+    id: '1',
+    title: 'Villa Renovatie Lombok',
+    category: 'renovatie',
+    location: 'Utrecht, Lombok',
+    description: 'Complete renovatie van een karakteristieke jaren 30 villa in de gewilde Lombok wijk. Alle originele details behouden met moderne comfort.',
+    image: '/images/project-renovatie.jpg',
+    year: 2023,
+    featured: true,
+    status: 'afgerond',
+  },
+  {
+    id: '2',
+    title: 'Nieuwbouw Dakappartement',
+    category: 'nieuwbouw',
+    location: 'Utrecht, Wittevrouwen',
+    description: 'Luxueus dakappartement met panoramisch uitzicht over Utrecht. Duurzame materialen en energieneutraal ontwerp.',
+    image: '/images/project-nieuwbouw.jpg',
+    year: 2023,
+    status: 'afgerond',
+  },
+  {
+    id: '3',
+    title: 'Dakrenovatie Rijtjeshuis',
+    category: 'dakwerk',
+    location: 'Utrecht, Oudwijk',
+    description: 'Vervanging van het complete dak inclusief isolatie en nieuwe dakramen. 30% energiebesparing gerealiseerd.',
+    image: '/images/project-dakwerk.jpg',
+    year: 2024,
+    status: 'in-uitvoering',
+  },
+  {
+    id: '4',
+    title: 'Grachtenpand Restauratie',
+    category: 'renovatie',
+    location: 'Utrecht, Binnenstad',
+    description: 'Zorgvuldige restauratie van een monumentaal grachtenpand. Samenwerking met monumentenzorg Utrecht.',
+    image: '/images/project-renovatie.jpg',
+    year: 2022,
+    featured: true,
+    status: 'afgerond',
+  },
+  {
+    id: '5',
+    title: 'Moderne Aanbouw Woning',
+    category: 'nieuwbouw',
+    location: 'Utrecht, Tuindorp',
+    description: 'Slim ontworpen aanbouw met veel glas en licht. Verbinding tussen oud en nieuw architectonisch vormgegeven.',
+    image: '/images/project-nieuwbouw.jpg',
+    year: 2024,
+    status: 'in-uitvoering',
+  },
+  {
+    id: '6',
+    title: 'Dakterras Transformatie',
+    category: 'dakwerk',
+    location: 'Utrecht, Pijlsweerd',
+    description: 'Ombouw van plat dak naar bewoonbaar dakterras met vergunning. Waterdichte afwerking en drainage systeem.',
+    image: '/images/project-dakwerk.jpg',
+    year: 2023,
+    status: 'afgerond',
+  },
+]
+
+export const featuredProjects = projects.filter(p => p.featured)

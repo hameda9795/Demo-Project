@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg2)" width="800" height="600"/>
+  
+  <!-- Fuse box outline -->
+  <rect x="200" y="100" width="400" height="400" rx="10" fill="#1e293b" stroke="#334155" stroke-width="4"/>
+  
+  <!-- Main switch -->
+    <rect x="230" y="130" width="340" height="60" rx="5" fill="#0f172a" stroke="#2563eb" stroke-width="2"/>
+  <text x="250" y="165" fill="#94a3b8" font-family="system-ui" font-size="14">HOOFDSCHAKELAAR</text>
+  <circle cx="520" cy="160" r="15" fill="#dc2626"/>
+  <text x="515" y="165" fill="white" font-family="system-ui" font-size="10">ON</text>
+  
+  <!-- Groups/fuses -->
+  <g id="fuse-row-1">
+    <rect x="230" y="210" width="70" height="90" rx="5" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+    <rect x="245" y="225" width="40" height="50" rx="3" fill="#facc15"/>
+    <text x="250" y="295" fill="#64748b" font-size="10">16A</text>
+    
+    <rect x="320" y="210" width="70" height="90" rx="5" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+    <rect x="335" y="225" width="40" height="50" rx="3" fill="#facc15"/>
+    <text x="340" y="295" fill="#64748b" font-size="10">16A</text>
+    
+    <rect x="410" y="210" width="70" height="90" rx="5" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+    <rect x="425" y="225" width="40" height="50" rx="3" fill="#facc15"/>
+    <text x="430" y="295" fill="#64748b" font-size="10">20A</text>
+    
+    <rect x="500" y="210" width="70" height="90" rx="5" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+    <rect x="515" y="225" width="40" height="50" rx="3" fill="#facc15"/>
+    <text x="520" y="295" fill="#64748b" font-size="10">20A</text>
+  </g>
+  
+  <g id="fuse-row-2">
+    <rect x="230" y="320" width="70" height="90" rx="5" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+    <rect x="245" y="335" width="40" height="50" rx="3" fill="#22c55e"/>
+    <text x="250" y="405" fill="#64748b" font-size="10">ALS</text>
+    
+    <rect x="320" y="320" width="70" height="90" rx="5" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+    <rect x="335" y="335" width="40" height="50" rx="3" fill="#facc15"/>
+    <text x="340" y="405" fill="#64748b" font-size="10">16A</text>
+    
+    <rect x="410" y="320" width="70" height="90" rx="5" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+    <rect x="425" y="335" width="40" height="50" rx="3" fill="#facc15"/>
+    <text x="430" y="405" fill="#64748b" font-size="10">16A</text>
+    
+    <rect x="500" y="320" width="70" height="90" rx="5" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+    <rect x="515" y="335" width="40" height="50" rx="3" fill="#facc15"/>
+    <text x="520" y="405" fill="#64748b" font-size="10">20A</text>
+  </g>
+  
+  <!-- Cables -->
+  <g stroke="#2563eb" stroke-width="3" fill="none" opacity="0.6">
+    <path d="M250,130 L250,80"/>
+    <path d="M300,130 L300,80"/>
+    <path d="M350,130 L350,80"/>
+    <path d="M400,130 L400,80"/>
+    <path d="M450,130 L450,80"/>
+    <path d="M500,130 L500,80"/>
+    <path d="M550,130 L550,80"/>
+  </g>
+  
+  <g stroke="#dc2626" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M265,300 L265,450"/>
+    <path d="M355,300 L355,450"/>
+    <path d="M445,300 L445,450"/>
+    <path d="M535,300 L535,450"/>
+  </g>
+  
+  <text x="400" y="550" text-anchor="middle" fill="#64748b" font-family="system-ui" font-size="14">
+    Modern Fuse Box (DEMO IMAGE)
+  </text>
+</svg>

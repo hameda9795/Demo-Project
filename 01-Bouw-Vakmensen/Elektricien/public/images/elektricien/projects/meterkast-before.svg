@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#451a03"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <filter id="grime">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" result="noise"/>
+      <feBlend in="SourceGraphic" in2="noise" mode="multiply"/>
+    </filter>
+  </defs>
+  <rect fill="url(#bg6)" width="800" height="600"/>
+  
+  <!-- Old fuse box -->
+  <g transform="translate(200, 100)">
+    <!-- Rusty/metal box -->
+    <rect x="0" y="0" width="400" height="400" rx="5" fill="#78350f" stroke="#451a03" stroke-width="4" filter="url(#grime)"/>
+    
+    <!-- Warning label -->
+    <rect x="20" y="20" width="360" height="40" fill="#facc15" opacity="0.7"/>
+    <text x="200" y="47" text-anchor="middle" fill="#451a03" font-family="system-ui" font-size="16" font-weight="bold">
+      ⚠ WAARSCHUWING: VEROUDERD
+    </text>
+    
+    <!-- Old ceramic fuses -->
+    <g transform="translate(30, 80)">
+      <rect x="0" y="0" width="70" height="100" rx="3" fill="#d4d4d4" stroke="#a3a3a3" stroke-width="2"/>
+      <rect x="10" y="20" width="50" height="60" rx="2" fill="#e5e5e5"/>
+      <circle cx="35" cy="90" r="8" fill="#dc2626"/>
+      <text x="35" y="95" text-anchor="middle" fill="white" font-size="8">16A</text>
+      <!-- Rust stains -->
+      <path d="M5,10 Q15,25 5,40" stroke="#92400e" stroke-width="3" fill="none" opacity="0.5"/>
+    </g>
+    
+    <g transform="translate(120, 80)">
+      <rect x="0" y="0" width="70" height="100" rx="3" fill="#d4d4d4" stroke="#a3a3a3" stroke-width="2"/>
+      <rect x="10" y="20" width="50" height="60" rx="2" fill="#e5e5e5"/>
+      <circle cx="35" cy="90" r="8" fill="#dc2626"/>
+      <text x="35" y="95" text-anchor="middle" fill="white" font-size="8">16A</text>
+    </g>
+    
+    <g transform="translate(210, 80)">
+      <rect x="0" y="0" width="70" height="100" rx="3" fill="#d4d4d4" stroke="#a3a3a3" stroke-width="2"/>
+      <rect x="10" y="20" width="50" height="60" rx="2" fill="#e5e5e5"/>
+      <circle cx="35" cy="90" r="8" fill="#dc2626"/>
+      <text x="35" y="95" text-anchor="middle" fill="white" font-size="8">25A</text>
+      <!-- Crack -->
+      <line x1="10" y1="20" x2="60" y2="80" stroke="#451a03" stroke-width="2" opacity="0.7"/>
+    </g>
+    
+    <g transform="translate(300, 80)">
+      <rect x="0" y="0" width="70" height="100" rx="3" fill="#d4d4d4" stroke="#a3a3a3" stroke-width="2" opacity="0.5"/>
+      <rect x="10" y="20" width="50" height="60" rx="2" fill="#e5e5e5" opacity="0.5"/>
+      <text x="35" y="60" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold">DEFECT</text>
+    </g>
+    
+    <!-- Second row -->
+    <g transform="translate(30, 200)">
+      <rect x="0" y="0" width="70" height="100" rx="3" fill="#d4d4d4" stroke="#a3a3a3" stroke-width="2"/>
+      <rect x="10" y="20" width="50" height="60" rx="2" fill="#e5e5e5"/>
+      <circle cx="35" cy="90" r="8" fill="#dc2626"/>
+    </g>
+    
+    <g transform="translate(120, 200)">
+      <rect x="0" y="0" width="70" height="100" rx="3" fill="#d4d4d4" stroke="#a3a3a3" stroke-width="2"/>
+      <rect x="10" y="20" width="50" height="60" rx="2" fill="#e5e5e5"/>
+      <circle cx="35" cy="90" r="8" fill="#dc2626"/>
+    </g>
+    
+    <!-- Empty slots with wires hanging -->
+    <g transform="translate(210, 200)">
+      <rect x="0" y="0" width="70" height="100" rx="3" fill="#451a03"/>
+      <path d="M20,50 Q35,80 50,50" stroke="#dc2626" stroke-width="3" fill="none"/>
+      <text x="35" y="80" text-anchor="middle" fill="#facc15" font-size="10">LEEG</text>
+    </g>
+    
+    <g transform="translate(300, 200)">
+      <rect x="0" y="0" width="70" height="100" rx="3" fill="#451a03"/>
+      <path d="M20,30 Q35,60 20,90 M50,30 Q35,60 50,90" stroke="#525252" stroke-width="3" fill="none"/>
+      <text x="35" y="55" text-anchor="middle" fill="#facc15" font-size="10">DRADEN</text>
+    </g>
+    
+    <!-- Danger warning overlay -->
+    <g transform="translate(100, 320)">
+      <polygon points="100,0 200,150 0,150" fill="#dc2626" opacity="0.9"/>
+      <text x="100" y="110" text-anchor="middle" fill="white" font-family="system-ui" font-size="40" font-weight="bold">!</text>
+    </g>
+  </g>
+  
+  <text x="400" y="570" text-anchor="middle" fill="#64748b" font-family="system-ui" font-size="14">
+    Old/Dangerous Fuse Box (DEMO IMAGE)
+  </text>
+</svg>

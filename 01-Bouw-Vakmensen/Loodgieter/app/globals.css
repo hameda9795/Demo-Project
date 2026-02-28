@@ -1,0 +1,311 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-inter text-gray-800 antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-steel-gray rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-deep-navy;
+}
+
+/* Liquid button effect */
+.btn-liquid {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-liquid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: currentColor;
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+
+.btn-liquid:hover::before {
+  width: 100%;
+}
+
+/* Clip path utilities */
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+}
+
+.clip-diagonal-reverse {
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 15%);
+}
+
+.clip-wave {
+  clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 90%, 50% 100%, 0 90%);
+}
+
+.clip-organic {
+  border-radius: 60px 20px 60px 20px;
+}
+
+/* Water ripple background animation */
+.water-ripple {
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(30, 58, 138, 0.05) 0%, transparent 40%);
+  animation: ripple-bg 8s ease-in-out infinite;
+}
+
+@keyframes ripple-bg {
+  0%, 100% {
+    background-position: 0% 0%, 100% 100%, 50% 50%;
+  }
+  50% {
+    background-position: 100% 100%, 0% 0%, 30% 70%;
+  }
+}
+
+/* Glass morphism */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Floating label form styles */
+.floating-label-group {
+  position: relative;
+}
+
+.floating-label-group input:focus ~ label,
+.floating-label-group input:not(:placeholder-shown) ~ label,
+.floating-label-group textarea:focus ~ label,
+.floating-label-group textarea:not(:placeholder-shown) ~ label,
+.floating-label-group select:focus ~ label,
+.floating-label-group select:not(:placeholder-shown) ~ label {
+  transform: translateY(-24px) scale(0.85);
+  @apply text-water-blue;
+}
+
+/* Phone shake animation */
+.phone-shake {
+  animation: phone-shake 5s ease-in-out infinite;
+}
+
+@keyframes phone-shake {
+  0%, 90%, 100% { transform: rotate(0deg); }
+  92% { transform: rotate(-15deg); }
+  94% { transform: rotate(15deg); }
+  96% { transform: rotate(-10deg); }
+  98% { transform: rotate(10deg); }
+}
+
+/* Custom Swiper styles */
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-deep-navy !w-10 !h-10 bg-white rounded-full shadow-lg;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  @apply text-sm font-bold;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-deep-navy;
+}
+
+/* Section divider wave */
+.wave-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+
+/* Image zoom on hover */
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 0.5s ease;
+}
+
+.img-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Card lift effect */
+.card-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-10px);
+  @apply shadow-2xl;
+}
+
+/* Pipe decorative element */
+.pipe-decoration {
+  position: relative;
+}
+
+.pipe-decoration::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6 0%, #1e3a8a 100%);
+  border-radius: 2px;
+}
+
+/* Comparison slider */
+.comparison-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.comparison-slider .handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: white;
+  cursor: ew-resize;
+  z-index: 10;
+}
+
+.comparison-slider .handle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Hide scrollbar for marquee */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Selection color */
+::selection {
+  @apply bg-water-blue text-white;
+}
+
+/* Focus visible styles */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-water-blue;
+}
+
+/* Map hotspot pulse */
+.map-hotspot {
+  position: relative;
+}
+
+.map-hotspot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: rgba(59, 130, 246, 0.4);
+  border-radius: 50%;
+  animation: hotspot-pulse 2s ease-out infinite;
+}
+
+@keyframes hotspot-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+/* Service area ripple */
+.area-ripple {
+  animation: area-ripple 3s ease-out infinite;
+}
+
+.area-ripple:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.area-ripple:nth-child(3) {
+  animation-delay: 2s;
+}
+
+@keyframes area-ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* Timeline connector */
+.timeline-connector::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #e5e7eb;
+  z-index: 0;
+}
+
+.timeline-connector.active::before {
+  background: linear-gradient(90deg, #3b82f6 var(--progress, 0%), #e5e7eb var(--progress, 0%));
+}

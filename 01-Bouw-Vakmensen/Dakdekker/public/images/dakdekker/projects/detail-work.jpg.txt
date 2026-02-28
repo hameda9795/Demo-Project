@@ -1,0 +1,5 @@
+Placeholder for: detail-work.jpg
+Description: Roof craftsmanship detail
+Intended URL: https://images.unsplash.com/photo-1558618047-f4b511ae5dc2?w=1200&q=80
+
+Please manually download an appropriate image and save it as: detail-work.jpg

@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  /* Brush stroke button effect */
+  .btn-brush {
+    @apply relative overflow-hidden;
+  }
+  
+  .btn-brush::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-teal-600 to-teal-700 -translate-x-full transition-transform duration-300;
+  }
+  
+  .btn-brush:hover::before {
+    @apply translate-x-0;
+  }
+  
+  /* Form input focus animation */
+  .input-animated {
+    @apply relative;
+  }
+  
+  .input-animated::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-teal-500 transition-all duration-300;
+  }
+  
+  .input-animated:focus-within::after {
+    @apply w-full;
+  }
+  
+  /* Color swatch hover effect */
+  .color-swatch {
+    @apply transition-all duration-200;
+  }
+  
+  .color-swatch:hover {
+    @apply scale-110 shadow-lg;
+  }
+  
+  /* Card hover lift */
+  .card-lift {
+    @apply transition-all duration-300;
+  }
+  
+  .card-lift:hover {
+    @apply -translate-y-1 shadow-xl;
+  }
+  
+  /* Image zoom on hover */
+  .img-zoom {
+    @apply overflow-hidden;
+  }
+  
+  .img-zoom img {
+    @apply transition-transform duration-500;
+  }
+  
+  .img-zoom:hover img {
+    @apply scale-105;
+  }
+}
+
+@layer utilities {
+  /* Font utilities */
+  .font-heading {
+    font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  }
+  
+  .font-body {
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  }
+  
+  /* Animation utilities */
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  /* Scroll reveal */
+  .scroll-reveal {
+    @apply opacity-0 translate-y-4 transition-all duration-500;
+  }
+  
+  .scroll-reveal.revealed {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  /* Paint drip decoration */
+  .paint-drip {
+    position: relative;
+  }
+  
+  .paint-drip::after {
+    content: '';
+    @apply absolute top-0 w-2 h-6 bg-current rounded-b-full;
+  }
+  
+  /* Brush stroke divider */
+  .brush-divider {
+    @apply w-full h-4;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' fill='%230d9488' opacity='.1'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Swiper custom styles */
+.swiper-pagination-bullet {
+  @apply bg-gray-300 opacity-100;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-teal-500;
+}
+
+/* Range input styling */
+input[type="range"] {
+  @apply appearance-none bg-gray-200 rounded-lg h-2;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply appearance-none w-5 h-5 bg-teal-500 rounded-full cursor-pointer shadow-md hover:bg-teal-600 transition-colors;
+}
+
+input[type="range"]::-moz-range-thumb {
+  @apply w-5 h-5 bg-teal-500 rounded-full cursor-pointer shadow-md border-0;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Selection color */
+::selection {
+  @apply bg-teal-100 text-teal-900;
+}

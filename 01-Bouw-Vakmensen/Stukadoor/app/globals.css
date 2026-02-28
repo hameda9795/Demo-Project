@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-plus-jakarta: 'Plus Jakarta Sans', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-sand-50 text-stone-800 font-body antialiased;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 
+           bg-gradient-to-br from-sand-300 to-sand-400 
+           text-stone-800 font-medium rounded-full
+           shadow-soft hover:shadow-glow
+           transition-all duration-300 hover:scale-105
+           border border-sand-300;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 
+           bg-white/80 backdrop-blur-sm
+           text-stone-700 font-medium rounded-full
+           border border-sand-300
+           shadow-soft hover:shadow-glow
+           transition-all duration-300 hover:scale-105;
+  }
+  
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-20;
+  }
+  
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md rounded-3xl 
+           border border-white/50 shadow-soft;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-stone-700 to-stone-900 
+           bg-clip-text text-transparent;
+  }
+  
+  .underline-spread {
+    @apply relative;
+  }
+  
+  .underline-spread::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 -translate-x-1/2 
+           h-0.5 bg-clay/60 rounded-full
+           transition-all duration-500 ease-out
+           w-0 group-hover:w-full;
+  }
+  
+  .seamless-section {
+    @apply relative;
+  }
+  
+  .seamless-section::before {
+    content: '';
+    @apply absolute inset-x-0 top-0 h-24 
+           bg-gradient-to-b from-sand-50 to-transparent 
+           pointer-events-none z-10;
+  }
+  
+  .texture-bg {
+    @apply relative;
+  }
+  
+  .texture-bg::before {
+    content: '';
+    @apply absolute inset-0 opacity-30 pointer-events-none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-sand-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-sand-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-sand-500;
+}
+
+/* Swiper customization */
+.swiper-button-prev,
+.swiper-button-next {
+  @apply text-sand-600 !w-12 !h-12 
+         bg-white/80 backdrop-blur-sm rounded-full
+         shadow-soft transition-all duration-300;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  @apply bg-white shadow-glow scale-110;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  @apply text-lg font-bold;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-sand-400 opacity-50;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-clay opacity-100;
+}
+
+/* Range input styling */
+input[type="range"] {
+  @apply appearance-none bg-transparent cursor-pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  @apply h-2 bg-sand-300 rounded-full;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply appearance-none -mt-2 w-5 h-5 
+         bg-gradient-to-br from-sand-300 to-sand-400
+         rounded-full shadow-soft
+         border-2 border-white
+         transition-transform duration-200;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  @apply scale-125;
+}
+
+/* Toggle switch */
+.toggle-checkbox:checked {
+  right: 0;
+  border-color: #c2410c;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #c2410c;
+}
