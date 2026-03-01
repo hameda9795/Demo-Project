@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for Het Kleine Paradijs */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(231, 111, 81, 0.2);
+  color: #6f4e37;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fefae0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f4a261;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e76f51;
+}
+
+/* Hide scrollbar for horizontal scroll galleries */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #e76f51;
+  outline-offset: 2px;
+}
+
+/* Button hover fill effect */
+.btn-jam-fill {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-jam-fill::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: #e76f51;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+  z-index: -1;
+}
+
+.btn-jam-fill:hover::before {
+  width: 300%;
+  height: 300%;
+}
+
+/* Steam animation for coffee elements */
+@keyframes steam-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px) scale(1.5);
+  }
+}
+
+.steam-effect {
+  position: relative;
+}
+
+.steam-effect::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 20px;
+  background: linear-gradient(to top, rgba(255,255,255,0.4), transparent);
+  border-radius: 50%;
+  animation: steam-rise 3s ease-out infinite;
+}
+
+/* Input glow effect */
+.input-sun-glow:focus {
+  box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.3), 0 0 20px rgba(244, 162, 97, 0.2);
+}
+
+/* Coffee cup loading animation */
+@keyframes fill-coffee {
+  0% {
+    clip-path: inset(100% 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.loading-coffee {
+  position: relative;
+}
+
+.loading-coffee::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #6f4e37;
+  animation: fill-coffee 2s ease-in-out infinite;
+}
+
+/* Wavy underline */
+.wavy-underline {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #e76f51;
+  text-underline-offset: 4px;
+}
+
+/* Handwritten text style */
+.handwritten {
+  font-family: 'Brush Script MT', 'Segoe Script', cursive;
+}
+
+/* Polaroid effect */
+.polaroid {
+  background: white;
+  padding: 12px 12px 40px 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #e76f51 0%, #f4a261 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Soft shadow variations */
+.shadow-soft {
+  box-shadow: 0 10px 40px -10px rgba(111, 78, 55, 0.15);
+}
+
+.shadow-softer {
+  box-shadow: 0 20px 60px -15px rgba(111, 78, 55, 0.1);
+}
+
+/* Card hover lift */
+.card-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px -12px rgba(111, 78, 55, 0.2);
+}
+
+/* Breathing animation for CTA */
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(231, 111, 81, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(231, 111, 81, 0.6);
+  }
+}
+
+.animate-breathing {
+  animation: breathing 3s ease-in-out infinite;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white;
+  }
+}

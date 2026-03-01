@@ -1,0 +1,133 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "Het Kleine Paradijs BED & BREAKFAST" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img [ref=e7]
+        - generic [ref=e12]:
+          - generic [ref=e13]: Het Kleine Paradijs
+          - generic [ref=e14]: BED & BREAKFAST
+      - navigation [ref=e15]:
+        - link "Onze Kamers" [ref=e16] [cursor=pointer]:
+          - /url: "#kamers"
+          - text: Onze Kamers
+        - link "Het Ontbijt" [ref=e17] [cursor=pointer]:
+          - /url: "#ontbijt"
+          - text: Het Ontbijt
+        - link "Over Ons" [ref=e18] [cursor=pointer]:
+          - /url: "#over-ons"
+          - text: Over Ons
+        - link "Omgeving" [ref=e19] [cursor=pointer]:
+          - /url: "#omgeving"
+          - text: Omgeving
+        - link "Blog" [ref=e20] [cursor=pointer]:
+          - /url: /dagboek/
+          - text: Blog
+        - link "Contact" [ref=e21] [cursor=pointer]:
+          - /url: "#contact"
+          - text: Contact
+      - generic [ref=e22]:
+        - generic [ref=e23]: DEMO WEBSITE
+        - generic [ref=e24]:
+          - link "Admin" [ref=e25] [cursor=pointer]:
+            - /url: /admin/
+            - img [ref=e26]
+            - text: Admin
+          - link "Mijn Boeking" [ref=e29] [cursor=pointer]:
+            - /url: /portal/
+            - img [ref=e30]
+            - text: Mijn Boeking
+  - main [ref=e33]:
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - img [ref=e38]
+        - heading "Mijn Verblijf" [level=1] [ref=e41]
+        - paragraph [ref=e42]: Log in om je verblijf te beheren
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: Gebruikersnaam
+          - textbox "gast" [ref=e46]
+        - generic [ref=e47]:
+          - generic [ref=e48]: Wachtwoord
+          - textbox "gast123" [active] [ref=e49]
+        - button "Inloggen" [ref=e50] [cursor=pointer]
+      - paragraph [ref=e52]:
+        - text: "Demo login:"
+        - text: "Gebruikersnaam: gast"
+        - text: "Wachtwoord: gast123"
+  - contentinfo [ref=e53]:
+    - generic [ref=e55]:
+      - generic [ref=e56]:
+        - link "Het Kleine Paradijs" [ref=e57] [cursor=pointer]:
+          - /url: /
+          - img [ref=e58]
+          - generic [ref=e63]: Het Kleine Paradijs
+        - paragraph [ref=e64]: Uw thuis weg van huis in het hart van Nederland. Geniet van huisgemaakt ontbijt en warme gastvrijheid.
+        - generic [ref=e65]:
+          - link "Instagram" [ref=e66] [cursor=pointer]:
+            - /url: https://instagram.com
+            - img [ref=e67]
+          - link "Facebook" [ref=e70] [cursor=pointer]:
+            - /url: https://facebook.com
+            - img [ref=e71]
+      - generic [ref=e73]:
+        - heading "Ontdek" [level=3] [ref=e74]
+        - list [ref=e75]:
+          - listitem [ref=e76]:
+            - link "Onze Kamers" [ref=e77] [cursor=pointer]:
+              - /url: "#kamers"
+          - listitem [ref=e78]:
+            - link "Het Ontbijt" [ref=e79] [cursor=pointer]:
+              - /url: "#ontbijt"
+          - listitem [ref=e80]:
+            - link "Over Ons" [ref=e81] [cursor=pointer]:
+              - /url: "#over-ons"
+          - listitem [ref=e82]:
+            - link "Omgeving" [ref=e83] [cursor=pointer]:
+              - /url: "#omgeving"
+          - listitem [ref=e84]:
+            - link "Blog" [ref=e85] [cursor=pointer]:
+              - /url: /dagboek/
+      - generic [ref=e86]:
+        - heading "Contact" [level=3] [ref=e87]
+        - list [ref=e88]:
+          - listitem [ref=e89]:
+            - img [ref=e90]
+            - generic [ref=e93]:
+              - text: DEMO Dorpsweg 12
+              - text: 1234 AB Dorpje
+              - text: (Voorbeeldadres)
+          - listitem [ref=e94]:
+            - img [ref=e95]
+            - generic [ref=e97]:
+              - text: 030-9876543
+              - text: (DEMO - Voorbeeld)
+          - listitem [ref=e98]:
+            - img [ref=e99]
+            - generic [ref=e102]:
+              - text: welcome@demo-paradijs.nl
+              - text: (DEMO)
+      - generic [ref=e103]:
+        - heading "Ontbijttijden" [level=3] [ref=e104]
+        - list [ref=e105]:
+          - listitem [ref=e106]:
+            - generic [ref=e107]: Maandag - Vrijdag
+            - generic [ref=e108]: 08:00 - 10:30
+          - listitem [ref=e109]:
+            - generic [ref=e110]: Zaterdag
+            - generic [ref=e111]: 08:30 - 11:00
+          - listitem [ref=e112]:
+            - generic [ref=e113]: Zondag
+            - generic [ref=e114]: 09:00 - 11:00
+        - paragraph [ref=e115]: "* Op aanvraag ook eerder mogelijk"
+    - generic [ref=e118]:
+      - paragraph [ref=e119]: © 2025 Tech Solutions Utrecht. Alle intellectuele eigendomsrechten voorbehouden. Concept, design en ontwikkeling door Tech Solutions Utrecht.
+      - paragraph [ref=e120]:
+        - text: Met
+        - img [ref=e121]
+        - text: gemaakt in Nederland
+  - link "Direct Contact" [ref=e123] [cursor=pointer]:
+    - /url: https://techsolutionsutrecht.nl/contact
+    - img [ref=e125]
+    - generic [ref=e129]: Direct Contact
+  - alert [ref=e130]

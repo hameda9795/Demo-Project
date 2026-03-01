@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * De Gouden Boon - Global Styles
+ * Mobile-first café website styles
+ */
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+@layer base {
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Minimum font size for accessibility */
+  body {
+    @apply text-mobile-body;
+    @apply bg-cream-50 text-espresso-900;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Remove default button styles */
+  button {
+    @apply cursor-pointer;
+    touch-action: manipulation;
+  }
+
+  /* Improve touch targets */
+  a, button {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Form elements */
+  input, textarea, select {
+    @apply text-mobile-body;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}
+
+/* ============================================
+   SAFE AREA INSETS (Notch Support)
+   ============================================ */
+
+@layer utilities {
+  .pb-safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  
+  .pt-safe-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  
+  .px-safe {
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+  }
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom scrollbar for desktop */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-cream-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-espresso-300 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-espresso-400;
+  }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* ============================================
+   LOADING SKELETON
+   ============================================ */
+
+.skeleton {
+  @apply bg-espresso-200 animate-pulse rounded-lg;
+}
+
+/* ============================================
+   SELECTION STYLING
+   ============================================ */
+
+::selection {
+  @apply bg-amber-200 text-espresso-900;
+}
+
+/* ============================================
+   FOCUS STYLES (Accessibility)
+   ============================================ */
+
+:focus-visible {
+  @apply outline-none ring-2 ring-amber-400 ring-offset-2 ring-offset-cream-50;
+}
+
+/* ============================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ============================================ */
+
+@media (hover: none) {
+  .hover\:bg-espresso-100:hover {
+    background-color: inherit;
+  }
+}
+
+/* ============================================
+   PREVENT TEXT SIZE ADJUSTMENT
+   ============================================ */
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ============================================
+   DISABLE CALLOUTS (iOS)
+   ============================================ */
+
+a {
+  -webkit-touch-callout: none;
+}
+
+/* ============================================
+   PREVENT PULL-TO-REFRESH ON MODALS
+   ============================================ */
+
+.no-overscroll {
+  overscroll-behavior: none;
+}
+
+/* ============================================
+   SWIPER CUSTOM STYLES
+   ============================================ */
+
+.swiper-pagination-bullet {
+  @apply bg-espresso-300 opacity-50;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-amber-500 opacity-100;
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
