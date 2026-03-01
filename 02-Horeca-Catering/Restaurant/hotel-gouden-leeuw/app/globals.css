@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+ * THE ART OF ARRIVAL - Global Styles
+ * Design Philosophy: Creating the feeling of entering a luxury hotel lobby
+ * through architectural archways, layered depth, and warm lighting effects.
+ */
+
+:root {
+  /* Brand Colors */
+  --navy: #1e3a5f;
+  --navy-dark: #0f172a;
+  --navy-light: #2d4a6f;
+  --gold: #d4af37;
+  --gold-light: #e4c95a;
+  --gold-dark: #b8960c;
+  --cream: #faf9f6;
+  --cream-dark: #f0efe9;
+  --burgundy: #722f37;
+  
+  /* Shadows */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-lift: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-cream text-navy font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Custom Components */
+@layer components {
+  /* Archway shape - the signature design element */
+  .arch-shape {
+    border-radius: 50% 50% 0 0;
+    overflow: hidden;
+  }
+  
+  .arch-full {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  /* Doorway frame for images */
+  .doorway-frame {
+    position: relative;
+    border: 4px solid var(--gold);
+    border-radius: 50% 50% 0 0;
+    padding: 8px;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+  }
+  
+  /* Premium paper texture overlay */
+  .texture-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* Gold shimmer button effect */
+  .btn-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+  
+  .btn-shimmer:hover::after {
+    left: 100%;
+  }
+  
+  /* Floating label for inputs */
+  .floating-label {
+    position: relative;
+  }
+  
+  .floating-label input:focus ~ label,
+  .floating-label input:not(:placeholder-shown) ~ label {
+    transform: translateY(-24px) scale(0.85);
+    color: var(--gold);
+  }
+  
+  /* Lift effect for cards */
+  .card-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lift);
+  }
+  
+  /* Curtain reveal animation */
+  .curtain-reveal {
+    animation: curtainOpen 1s ease-out forwards;
+  }
+  
+  /* Scroll reveal with arch clip-path */
+  .arch-reveal {
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 0.8s ease-out;
+  }
+  
+  .arch-reveal.revealed {
+    clip-path: inset(0 0 0% 0);
+  }
+}
+
+/* Utility Classes */
+@layer utilities {
+  /* Text gradient */
+  .text-gradient-gold {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Backdrop blur support */
+  .backdrop-blur-nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Parallax container */
+  .parallax-container {
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  .parallax-layer {
+    transform: translateZ(0);
+  }
+  
+  .parallax-layer-back {
+    transform: translateZ(-1px) scale(2);
+  }
+}
+
+/* Swiper Customization */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--gold) !important;
+  background: rgba(30, 58, 95, 0.8);
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50%;
+  backdrop-filter: blur(4px);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important;
+  font-weight: bold;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--gold) !important;
+}
+
+/* Date picker customization */
+input[type="date"] {
+  position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Selection color */
+::selection {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
