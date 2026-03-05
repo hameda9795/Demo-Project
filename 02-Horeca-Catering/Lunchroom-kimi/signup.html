@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registreren | De Lunchkamer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor cursor-dot"></div>
+    <div class="cursor cursor-outline"></div>
+
+    <!-- Floating Action Button -->
+    <a href="https://techsolutionsutrecht.nl/contact" target="_blank" class="fab" aria-label="Contact opnemen">
+        <span class="fab-text">Contact</span>
+        <span class="fab-pulse"></span>
+    </a>
+
+    <!-- Auth Page -->
+    <div class="auth-page">
+        <div class="auth-container">
+            <div class="auth-header">
+                <a href="index.html" class="auth-logo">
+                    <span class="logo-de">De</span>
+                    <span class="logo-main">Lunchkamer</span>
+                </a>
+                <h1 class="auth-title">Maak een account</h1>
+                <p class="auth-subtitle">Registreer om bestellingen te plaatsen</p>
+            </div>
+
+            <form class="auth-form" id="signupForm">
+                <div class="form-group">
+                    <label for="name">Volledige naam</label>
+                    <input type="text" id="name" name="name" required placeholder="Jan Jansen">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mailadres</label>
+                    <input type="email" id="email" name="email" required placeholder="jouw@email.nl">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefoonnummer</label>
+                    <input type="tel" id="phone" name="phone" placeholder="06 12345678">
+                </div>
+                <div class="form-group">
+                    <label for="password">Wachtwoord</label>
+                    <input type="password" id="password" name="password" required placeholder="Minimaal 8 tekens">
+                </div>
+                <div class="form-group">
+                    <label for="passwordConfirm">Bevestig wachtwoord</label>
+                    <input type="password" id="passwordConfirm" name="passwordConfirm" required placeholder="••••••••">
+                </div>
+                <div class="form-group">
+                    <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-weight: normal; cursor: pointer;">
+                        <input type="checkbox" required style="margin-top: 0.3rem;">
+                        <span style="font-size: var(--text-sm);">Ik ga akkoord met de <a href="#" style="color: var(--color-accent);">algemene voorwaarden</a> en <a href="#" style="color: var(--color-accent);">privacy policy</a></span>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Account aanmaken</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Al een account? <a href="login.html">Log hier in</a></p>
+                <p style="margin-top: 0.5rem;"><a href="index.html">← Terug naar website</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Disclaimer (minimal) -->
+    <div style="position: fixed; bottom: 10px; left: 0; right: 0; text-align: center; font-size: 11px; color: var(--color-stone); padding: 0 20px;">
+        Dit is een demoversie - alle rechten behoren toe aan <a href="https://www.techsolutionsutrecht.nl" target="_blank" style="color: var(--color-accent);">TechSolutions Utrecht</a>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Signup form handler
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const password = document.getElementById('password').value;
+            const passwordConfirm = document.getElementById('passwordConfirm').value;
+            
+            if (password !== passwordConfirm) {
+                alert('De wachtwoorden komen niet overeen.');
+                return;
+            }
+            
+            if (password.length < 8) {
+                alert('Het wachtwoord moet minimaal 8 tekens bevatten.');
+                return;
+            }
+            
+            alert('Account succesvol aangemaakt!\n\nJe kunt nu inloggen.');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

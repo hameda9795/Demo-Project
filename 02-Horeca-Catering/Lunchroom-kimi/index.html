@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Lunchkamer | Horeca & Catering Utrecht</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor cursor-dot"></div>
+    <div class="cursor cursor-outline"></div>
+
+    <!-- Floating Action Button -->
+    <a href="https://techsolutionsutrecht.nl/contact" target="_blank" class="fab" aria-label="Contact opnemen">
+        <span class="fab-text">Contact</span>
+        <span class="fab-pulse"></span>
+    </a>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="#" class="logo">
+                    <span class="logo-de">De</span>
+                    <span class="logo-main">Lunchkamer</span>
+                </a>
+            </div>
+            <button class="menu-toggle" aria-label="Menu openen">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#over-ons" class="nav-link">Over ons</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#catering" class="nav-link">Catering</a></li>
+                <li><a href="#galerij" class="nav-link">Galerij</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link nav-login">Inloggen</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+            <div class="hero-shape hero-shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-eyebrow scroll-reveal">Horeca & Catering sinds 2015</p>
+                <h1 class="hero-title">
+                    <span class="title-line scroll-reveal" data-delay="100">Verse</span>
+                    <span class="title-line scroll-reveal" data-delay="200">Lunch</span>
+                    <span class="title-line title-line-accent scroll-reveal" data-delay="300">& More</span>
+                </h1>
+                <p class="hero-description scroll-reveal" data-delay="400">
+                    Dagverse broodjes, huisgemaakte soepen en verrassende salades. 
+                    Wij verzorgen jouw lunch met passie en lokale ingrediënten.
+                </p>
+                <div class="hero-actions scroll-reveal" data-delay="500">
+                    <a href="#menu" class="btn btn-primary">Bekijk menu</a>
+                    <a href="#catering" class="btn btn-secondary">Catering aanvragen</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <div class="hero-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80" 
+                             alt="Gezellige lunchroom interieur met natuurlijk licht" 
+                             class="hero-image"
+                             loading="eager">
+                    </div>
+                    <div class="hero-floating-tag tag-1">
+                        <span class="tag-number">100%</span>
+                        <span class="tag-text">Vers</span>
+                    </div>
+                    <div class="hero-floating-tag tag-2">
+                        <span class="tag-number">Lokaal</span>
+                        <span class="tag-text">Geleverd</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="over-ons" class="section section-about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="about-image-primary scroll-reveal">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" 
+                             alt="Chef bereidt vers broodje" 
+                             loading="lazy">
+                    </div>
+                    <div class="about-image-secondary scroll-reveal" data-delay="200">
+                        <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=400&q=80" 
+                             alt="Verse ingrediënten op houten plank" 
+                             loading="lazy">
+                    </div>
+                    <div class="about-shape"></div>
+                </div>
+                <div class="about-content">
+                    <span class="section-eyebrow scroll-reveal">Ons verhaal</span>
+                    <h2 class="section-title scroll-reveal" data-delay="100">
+                        Passie voor <em>goed</em> eten
+                    </h2>
+                    <div class="about-text scroll-reveal" data-delay="200">
+                        <p>
+                            De Lunchkamer begon in 2015 als een klein familiebedrijf met één droom: 
+                            de beste lunch van Utrecht serveren. Wat begon als een bescheiden zaakje 
+                            aan de Oudegracht, is uitgegroeid tot een geliefde plek voor zakelijke 
+                            lunches, weekendbrunches en alles daartussen.
+                        </p>
+                        <p>
+                            Wij geloven in eerlijk eten. Dat betekent brood van de bakker om de hoek, 
+                            groenten van lokale boeren en vlees van duurzame leveranciers. Geen shortcuts, 
+                            gewoon lekker.
+                        </p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item scroll-reveal" data-delay="300">
+                            <span class="stat-number">9+</span>
+                            <span class="stat-label">Jaar ervaring</span>
+                        </div>
+                        <div class="stat-item scroll-reveal" data-delay="400">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Tevreden gasten</span>
+                        </div>
+                        <div class="stat-item scroll-reveal" data-delay="500">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">Lokale partners</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section section-menu">
+        <div class="menu-bg-text">MENU</div>
+        <div class="container">
+            <div class="section-header section-header-centered">
+                <span class="section-eyebrow scroll-reveal">Onze specialiteiten</span>
+                <h2 class="section-title scroll-reveal" data-delay="100">Het Menu</h2>
+            </div>
+            
+            <div class="menu-categories">
+                <button class="menu-tab active" data-category="broodjes">Broodjes</button>
+                <button class="menu-tab" data-category="soepen">Soepen</button>
+                <button class="menu-tab" data-category="salades">Salades</button>
+                <button class="menu-tab" data-category="dranken">Dranken</button>
+            </div>
+
+            <div class="menu-content">
+                <!-- Broodjes -->
+                <div class="menu-panel active" data-panel="broodjes">
+                    <div class="menu-grid">
+                        <div class="menu-item scroll-reveal">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">De Utrechter</h3>
+                                <span class="menu-item-price">€6,50</span>
+                            </div>
+                            <p class="menu-item-description">
+                                Gerookte kip, avocado, bacon, sla en huisgemaakte cocktailsaus op meergranenbrood
+                            </p>
+                        </div>
+                        <div class="menu-item scroll-reveal" data-delay="100">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Italiaanse Klassieker</h3>
+                                <span class="menu-item-price">€5,95</span>
+                            </div>
+                            <p class="menu-item-description">
+                                Mozzarella, tomaat, basilicum pesto en rucola op ciabatta
+                            </p>
+                        </div>
+                        <div class="menu-item scroll-reveal" data-delay="200">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Vegetarisch Genot</h3>
+                                <span class="menu-item-price">€5,75</span>
+                            </div>
+                            <p class="menu-item-description">
+                                Gegrilde groenten, hummus, feta en spinazie op zuurdesem
+                            </p>
+                        </div>
+                        <div class="menu-item scroll-reveal" data-delay="300">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Zalm Deluxe</h3>
+                                <span class="menu-item-price">€7,25</span>
+                            </div>
+                            <p class="menu-item-description">
+                                Gerookte zalm, roomkaas, kappertjes en rode ui op roggebrood
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soepen -->
+                <div class="menu-panel" data-panel="soepen">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Tomaat-Basilicum</h3>
+                                <span class="menu-item-price">€4,50</span>
+                            </div>
+                            <p class="menu-item-description">
+                                Romige tomatensoep met verse basilicum en een dot crème fraîche
+                            </p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Pompoen</h3>
+                                <span class="menu-item-price">€4,95</span>
+                            </div>
+                            <p class="menu-item-description">
+                                Seizoenspompoen met gember, kokosmelk en geroosterde pompoenpitten
+                            </p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Franse Uiensoep</h3>
+                                <span class="menu-item-price">€5,25</span>
+                            </div>
+                            <p class="menu-item-description">
+                        Uiensoep met gegratineerde kaas en een plakje stokbrood
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Salades -->
+                <div class="menu-panel" data-panel="salades">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Caesar Salade</h3>
+                                <span class="menu-item-price">€8,50</span>
+                            </div>
+                            <p class="menu-item-description">
+                                Klassieke caesar met gegrilde kip, parmezaan, croutons en huisgemaakte dressing
+                            </p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Quinoa Bowl</h3>
+                                <span class="menu-item-price">€9,25</span>
+                            </div>
+                            <p class="menu-item-description">
+                                Quinoa, avocado, kidneybonen, mais, tomaat en limoen-cilantro dressing
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dranken -->
+                <div class="menu-panel" data-panel="dranken">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Huisgemaakte Limonade</h3>
+                                <span class="menu-item-price">€3,50</span>
+                            </div>
+                            <p class="menu-item-description">Vers geperst met dagelijks wisselende smaken</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Speciaalbier</h3>
+                                <span class="menu-item-price">€4,50</span>
+                            </div>
+                            <p class="menu-item-description">Lokaal gebrouwen, wisselend aanbod</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catering Section -->
+    <section id="catering" class="section section-catering">
+        <div class="container">
+            <div class="catering-grid">
+                <div class="catering-content">
+                    <span class="section-eyebrow scroll-reveal">Zakelijk & Privé</span>
+                    <h2 class="section-title scroll-reveal" data-delay="100">
+                        Catering op <em>maat</em>
+                    </h2>
+                    <div class="catering-text scroll-reveal" data-delay="200">
+                        <p>
+                            Van vergaderlunch tot bruiloft: wij verzorgen het eten voor jouw evenement. 
+                            Vers, lekker en precies afgestemd op jouw wensen en dieetwensen.
+                        </p>
+                        <ul class="catering-list">
+                            <li class="scroll-reveal" data-delay="300">
+                                <span class="list-icon">✓</span>
+                                <span>Vergaderlunches & bedrijfsevents</span>
+                            </li>
+                            <li class="scroll-reveal" data-delay="350">
+                                <span class="list-icon">✓</span>
+                                <span>Bruiloften & feesten</span>
+                            </li>
+                            <li class="scroll-reveal" data-delay="400">
+                                <span class="list-icon">✓</span>
+                                <span>High tea & brunch</span>
+                            </li>
+                            <li class="scroll-reveal" data-delay="450">
+                                <span class="list-icon">✓</span>
+                                <span>Dietary requirements altijd mogelijk</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-primary scroll-reveal" data-delay="500">
+                        Vraag offerte aan
+                    </a>
+                </div>
+                <div class="catering-visual">
+                    <div class="catering-image-main scroll-reveal">
+                        <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=700&q=80" 
+                             alt="Catering buffet opgesteld" 
+                             loading="lazy">
+                    </div>
+                    <div class="catering-image-secondary scroll-reveal" data-delay="200">
+                        <img src="https://images.unsplash.com/photo-1529563021893-cc83c992d75d?w=400&q=80" 
+                             alt="Verse sandwich catering" 
+                             loading="lazy">
+                    </div>
+                    <div class="catering-badge scroll-reveal" data-delay="400">
+                        <span class="badge-text">Ook voor</span>
+                        <span class="badge-main">Grote groepen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galerij" class="section section-gallery">
+        <div class="container">
+            <div class="section-header section-header-centered">
+                <span class="section-eyebrow scroll-reveal">Impressie</span>
+                <h2 class="section-title scroll-reveal" data-delay="100">Galerij</h2>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item-large scroll-reveal">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80" 
+                         alt="Restaurant interieur" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Onze zaak</span>
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal" data-delay="100">
+                    <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&q=80" 
+                         alt="Vers broodje" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Broodjes</span>
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal" data-delay="200">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80" 
+                         alt="Gezonde salade" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Salades</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item-tall scroll-reveal" data-delay="300">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80" 
+                         alt="Cocktail drankjes" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Dranken</span>
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal" data-delay="400">
+                    <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&q=80" 
+                         alt="Dessert" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Toetjes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-contact">
+        <div class="contact-shape contact-shape-1"></div>
+        <div class="contact-shape contact-shape-2"></div>
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-eyebrow scroll-reveal">Kom langs</span>
+                    <h2 class="section-title scroll-reveal" data-delay="100">Contact</h2>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item scroll-reveal" data-delay="200">
+                            <span class="contact-label">Adres</span>
+                            <address>
+                                De Lunchkamer<br>
+                                Oudegracht 123<br>
+                                3511 AB Utrecht
+                            </address>
+                        </div>
+                        <div class="contact-item scroll-reveal" data-delay="300">
+                            <span class="contact-label">Contact</span>
+                            <p>
+                                <a href="tel:+31301234567">030 - 123 4567</a><br>
+                                <a href="mailto:hallo@delunchkamer.nl">hallo@delunchkamer.nl</a>
+                            </p>
+                        </div>
+                        <div class="contact-item scroll-reveal" data-delay="400">
+                            <span class="contact-label">Openingstijden</span>
+                            <p>
+                                Ma - Vr: 08:00 - 17:00<br>
+                                Za: 09:00 - 16:00<br>
+                                Zo: Gesloten
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper scroll-reveal" data-delay="300">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Naam</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Onderwerp</label>
+                            <select id="subject" name="subject">
+                                <option value="algemeen">Algemene vraag</option>
+                                <option value="catering">Catering aanvraag</option>
+                                <option value="reservering">Reservering</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Bericht</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Verstuur bericht</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-de">De</span>
+                        <span class="logo-main">Lunchkamer</span>
+                    </a>
+                    <p class="footer-tagline">
+                        Verse lunch, warme service sinds 2015.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Snel naar</h4>
+                    <ul>
+                        <li><a href="#over-ons">Over ons</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#catering">Catering</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>
+                        Oudegracht 123<br>
+                        3511 AB Utrecht<br>
+                        <a href="tel:+31301234567">030 - 123 4567</a><br>
+                        <a href="mailto:hallo@delunchkamer.nl">hallo@delunchkamer.nl</a>
+                    </p>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Volg ons</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="LinkedIn">LI</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-disclaimer">
+                    Dit is een demoversie en alle materiële en intellectuele rechten behoren toe aan 
+                    <a href="https://www.techsolutionsutrecht.nl" target="_blank">TechSolutions Utrecht</a>.
+                </p>
+                <p class="footer-copyright">
+                    © 2024 De Lunchkamer. Website door 
+                    <a href="https://www.techsolutionsutrecht.nl" target="_blank">www.techsolutionsutrecht.nl</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

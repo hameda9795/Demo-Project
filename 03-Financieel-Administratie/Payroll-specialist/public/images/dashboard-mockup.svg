@@ -1,0 +1,50 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f1f5f9"/>
+  
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="200" height="600" fill="#ffffff"/>
+  <rect x="20" y="30" width="50" height="50" rx="10" fill="#059669"/>
+  <rect x="20" y="100" width="160" height="10" rx="5" fill="#e2e8f0"/>
+  <rect x="20" y="120" width="140" height="10" rx="5" fill="#e2e8f0"/>
+  <rect x="20" y="140" width="150" height="10" rx="5" fill="#e2e8f0"/>
+  
+  <!-- Header -->
+  <rect x="200" y="0" width="600" height="80" fill="#ffffff"/>
+  <rect x="650" y="25" width="120" height="30" rx="15" fill="#f1f5f9"/>
+  
+  <!-- Main content cards -->
+  <!-- Card 1 -->
+  <rect x="230" y="110" width="250" height="120" rx="10" fill="#ffffff"/>
+  <rect x="250" y="130" width="100" height="15" rx="4" fill="#059669" opacity="0.5"/>
+  <rect x="250" y="155" width="150" height="25" rx="4" fill="#1f2937"/>
+  <rect x="250" y="190" width="80" height="10" rx="4" fill="#94a3b8"/>
+  
+  <!-- Card 2 -->
+  <rect x="500" y="110" width="250" height="120" rx="10" fill="#ffffff"/>
+  <rect x="520" y="130" width="100" height="15" rx="4" fill="#fbbf24" opacity="0.5"/>
+  <rect x="520" y="155" width="150" height="25" rx="4" fill="#1f2937"/>
+  <rect x="520" y="190" width="80" height="10" rx="4" fill="#94a3b8"/>
+  
+  <!-- Chart area -->
+  <rect x="230" y="250" width="520" height="320" rx="10" fill="#ffffff"/>
+  <rect x="250" y="270" width="150" height="20" rx="4" fill="#1f2937"/>
+  
+  <!-- Chart bars -->
+  <rect x="270" y="320" width="40" height="150" rx="4" fill="#059669" opacity="0.8"/>
+  <rect x="320" y="350" width="40" height="120" rx="4" fill="#059669" opacity="0.6"/>
+  <rect x="370" y="300" width="40" height="170" rx="4" fill="#059669" opacity="0.8"/>
+  <rect x="420" y="340" width="40" height="130" rx="4" fill="#059669" opacity="0.6"/>
+  <rect x="470" y="310" width="40" height="160" rx="4" fill="#059669" opacity="0.8"/>
+  <rect x="520" y="360" width="40" height="110" rx="4" fill="#059669" opacity="0.6"/>
+  
+  <!-- Blur overlay -->
+  <rect width="800" height="600" fill="#ffffff" opacity="0.3"/>
+</svg>

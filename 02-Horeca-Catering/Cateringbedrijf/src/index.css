@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 0 0% 10%;
+    --card: 40 33% 97%;
+    --card-foreground: 0 0% 10%;
+    --popover: 40 33% 97%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 174 76% 24%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 33% 94%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 40 20% 90%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 20 55% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 20% 85%;
+    --input: 40 20% 90%;
+    --ring: 174 76% 24%;
+    --radius: 0.5rem;
+    --sidebar-background: 40 33% 97%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 174 76% 24%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 33% 94%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 40 20% 85%;
+    --sidebar-ring: 174 76% 24%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-cream text-charcoal font-sans antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+  
+  ::selection {
+    @apply bg-teal/20 text-charcoal;
+  }
+}
+
+@layer components {
+  /* Editorial Typography */
+  .editorial-h1 {
+    @apply font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.1] tracking-tight;
+  }
+  
+  .editorial-h2 {
+    @apply font-serif text-3xl sm:text-4xl md:text-5xl font-medium leading-[1.15] tracking-tight;
+  }
+  
+  .editorial-h3 {
+    @apply font-serif text-2xl sm:text-3xl font-medium leading-[1.2];
+  }
+  
+  .editorial-body {
+    @apply font-sans text-base sm:text-lg leading-relaxed font-light;
+  }
+  
+  .editorial-caption {
+    @apply font-sans text-xs sm:text-sm uppercase tracking-[0.2em] font-medium;
+  }
+  
+  .pull-quote {
+    @apply font-serif text-2xl sm:text-3xl md:text-4xl italic leading-[1.3] text-charcoal/90;
+  }
+  
+  /* Menu Item Style */
+  .menu-item {
+    @apply relative inline-block transition-colors duration-300;
+  }
+  
+  .menu-item::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-[1px] bg-terracotta transition-all duration-500 ease-out;
+  }
+  
+  .menu-item:hover {
+    @apply text-terracotta;
+  }
+  
+  .menu-item:hover::after {
+    @apply w-full;
+  }
+  
+  /* Thick Border Sections */
+  .border-section-top {
+    @apply border-t-4 md:border-t-8 border-charcoal;
+  }
+  
+  .border-section-bottom {
+    @apply border-b-4 md:border-b-8 border-charcoal;
+  }
+  
+  .border-terracotta-left {
+    @apply border-l-4 md:border-l-8 border-terracotta;
+  }
+  
+  /* Form Inputs - Editorial Style */
+  .editorial-input {
+    @apply w-full bg-transparent border-b-2 border-charcoal/30 py-4 px-0 text-lg font-sans placeholder:text-charcoal/40 focus:outline-none focus:border-teal transition-colors duration-300;
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-cream;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-charcoal/20 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-charcoal/40;
+  }
+  
+  /* Loading Animation */
+  .plate-loader {
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+  }
+  
+  .plate-loader.animate {
+    animation: plate-draw 1.5s ease-out forwards;
+  }
+  
+  /* Custom Cursor */
+  .custom-cursor {
+    @apply fixed w-8 h-8 pointer-events-none z-[9999] mix-blend-difference;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out, opacity 0.2s ease;
+  }
+  
+  .custom-cursor.spoon {
+    @apply opacity-100;
+  }
+  
+  .custom-cursor.hidden {
+    @apply opacity-0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Animation Delays */
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+  
+  /* Border Width Extensions */
+  .border-6 {
+    border-width: 6px;
+  }
+  
+  /* Aspect Ratio */
+  .aspect-editorial {
+    aspect-ratio: 3/4;
+  }
+}

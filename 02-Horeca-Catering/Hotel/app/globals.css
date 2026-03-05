@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-teal: #0f766e;
+  --color-cream: #faf9f6;
+  --color-charcoal: #1a1a1a;
+  --color-gold: #d4af37;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Custom cursor - Key shape for booking buttons */
+.cursor-key {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%230f766e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 9.5a2.5 2.5 0 0 1 5 0V19H7V9.5z'/%3E%3Ccircle cx='9.5' cy='6.5' r='2.5'/%3E%3Cpath d='M12 19h8'/%3E%3Cpath d='M17 16v6'/%3E%3C/svg%3E") 16 16, pointer;
+}
+
+/* Parallax layers */
+.parallax-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.parallax-layer {
+  will-change: transform;
+}
+
+/* Pulse animation for CTA */
+@keyframes pulse-soft {
+  0%, 100% {
+    box-shadow: 0 10px 25px -5px rgba(15, 118, 110, 0.3);
+  }
+  50% {
+    box-shadow: 0 15px 35px -5px rgba(15, 118, 110, 0.5);
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+/* Thick border utility */
+.border-editorial {
+  border-width: 6px;
+  border-style: solid;
+}
+
+/* Masonry grid styles */
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+/* Soft shadow for editorial feel */
+.shadow-editorial {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-teal);
+  color: white;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-teal);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-teal-dark);
+}

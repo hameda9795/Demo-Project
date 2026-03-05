@@ -1,0 +1,36 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f1f5f9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+  
+  <!-- Office background elements -->
+  <rect x="50" y="100" width="200" height="300" fill="#cbd5e1" opacity="0.3" rx="10"/>
+  <rect x="550" y="100" width="200" height="300" fill="#cbd5e1" opacity="0.3" rx="10"/>
+  
+  <!-- Team members as abstract shapes -->
+  <!-- Person 1 -->
+  <circle cx="250" cy="250" r="60" fill="#059669" opacity="0.2"/>
+  <circle cx="250" cy="220" r="35" fill="#059669"/>
+  <rect x="190" y="260" width="120" height="100" rx="20" fill="#059669"/>
+  
+  <!-- Person 2 -->
+  <circle cx="400" cy="280" r="60" fill="#475569" opacity="0.2"/>
+  <circle cx="400" cy="250" r="35" fill="#475569"/>
+  <rect x="340" y="290" width="120" height="100" rx="20" fill="#475569"/>
+  
+  <!-- Person 3 -->
+  <circle cx="550" cy="250" r="60" fill="#fbbf24" opacity="0.2"/>
+  <circle cx="550" cy="220" r="35" fill="#fbbf24"/>
+  <rect x="490" y="260" width="120" height="100" rx="20" fill="#fbbf24"/>
+  
+  <!-- Decorative elements -->
+  <rect x="100" y="450" width="600" height="4" rx="2" fill="#cbd5e1" opacity="0.5"/>
+  <circle cx="150" cy="150" r="30" fill="#059669" opacity="0.1"/>
+  <circle cx="650" cy="400" r="40" fill="#fbbf24" opacity="0.1"/>
+</svg>

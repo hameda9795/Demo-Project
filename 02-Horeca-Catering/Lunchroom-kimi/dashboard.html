@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | De Lunchkamer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor cursor-dot"></div>
+    <div class="cursor cursor-outline"></div>
+
+    <!-- Floating Action Button -->
+    <a href="https://techsolutionsutrecht.nl/contact" target="_blank" class="fab" aria-label="Contact opnemen">
+        <span class="fab-text">Contact</span>
+        <span class="fab-pulse"></span>
+    </a>
+
+    <!-- Admin Page -->
+    <div class="admin-page">
+        <!-- Admin Header -->
+        <header class="admin-header">
+            <div class="admin-header-content">
+                <a href="index.html" class="auth-logo">
+                    <span class="logo-de">De</span>
+                    <span class="logo-main">Lunchkamer</span>
+                </a>
+                <nav class="admin-nav">
+                    <a href="dashboard.html" class="active">Dashboard</a>
+                    <a href="#">Bestellingen</a>
+                    <a href="#">Menu</a>
+                    <a href="#">Klanten</a>
+                    <a href="#">Instellingen</a>
+                </nav>
+                <div class="admin-user">
+                    <span class="admin-user-name">Demo Gebruiker</span>
+                    <a href="index.html" class="admin-logout">Uitloggen</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Admin Main Content -->
+        <main class="admin-main">
+            <div class="admin-welcome">
+                <h1>Welkom, Demo Gebruiker</h1>
+                <p>Hier is een overzicht van je lunchroom vandaag.</p>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="admin-grid">
+                <div class="admin-card">
+                    <div class="admin-card-icon">📦</div>
+                    <h3>Nieuwe bestellingen</h3>
+                    <p>Vandaag</p>
+                    <div class="admin-card-value">12</div>
+                </div>
+                <div class="admin-card">
+                    <div class="admin-card-icon">💰</div>
+                    <h3>Omzet</h3>
+                    <p>Vandaag</p>
+                    <div class="admin-card-value">€486</div>
+                </div>
+                <div class="admin-card">
+                    <div class="admin-card-icon">👥</div>
+                    <h3>Klanten</h3>
+                    <p>Nieuw deze week</p>
+                    <div class="admin-card-value">8</div>
+                </div>
+                <div class="admin-card">
+                    <div class="admin-card-icon">📅</div>
+                    <h3>Catering</h3>
+                    <p>Aanvragen deze maand</p>
+                    <div class="admin-card-value">5</div>
+                </div>
+            </div>
+
+            <!-- Recent Orders Table -->
+            <div class="admin-table-container">
+                <h3 style="margin-bottom: var(--space-md); font-family: var(--font-display); font-size: var(--text-xl);">Recente bestellingen</h3>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Bestelnr.</th>
+                            <th>Klant</th>
+                            <th>Items</th>
+                            <th>Bedrag</th>
+                            <th>Tijd</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1024</td>
+                            <td>Pieter van Dijk</td>
+                            <td>Utrechter, Koffie</td>
+                            <td>€9,00</td>
+                            <td>11:42</td>
+                            <td><span class="admin-badge admin-badge-success">Afgerond</span></td>
+                        </tr>
+                        <tr>
+                            <td>#1025</td>
+                            <td>Sanne Jansen</td>
+                            <td>Caesar Salade, Limonade</td>
+                            <td>€12,00</td>
+                            <td>11:38</td>
+                            <td><span class="admin-badge admin-badge-pending">In behandeling</span></td>
+                        </tr>
+                        <tr>
+                            <td>#1026</td>
+                            <td>Bakkerij Deeg</td>
+                            <td>10x Broodjes (catering)</td>
+                            <td>€65,00</td>
+                            <td>11:15</td>
+                            <td><span class="admin-badge admin-badge-pending">In behandeling</span></td>
+                        </tr>
+                        <tr>
+                            <td>#1027</td>
+                            <td>Mark de Vries</td>
+                            <td>Italiaanse Klassieker, Soep</td>
+                            <td>€10,45</td>
+                            <td>11:05</td>
+                            <td><span class="admin-badge admin-badge-success">Afgerond</span></td>
+                        </tr>
+                        <tr>
+                            <td>#1028</td>
+                            <td>Lisa Bakker</td>
+                            <td>Quinoa Bowl, Smoothie</td>
+                            <td>€13,75</td>
+                            <td>10:52</td>
+                            <td><span class="admin-badge admin-badge-success">Afgerond</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Catering Requests -->
+            <div class="admin-table-container" style="margin-top: var(--space-lg);">
+                <h3 style="margin-bottom: var(--space-md); font-family: var(--font-display); font-size: var(--text-xl);">Openstaande catering aanvragen</h3>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Aanvraag</th>
+                            <th>Klant</th>
+                            <th>Type</th>
+                            <th>Datum</th>
+                            <th>Aantal personen</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#C-45</td>
+                            <td>TechStart Utrecht</td>
+                            <td>Vergaderlunch</td>
+                            <td>15 maart 2024</td>
+                            <td>15 personen</td>
+                            <td><span class="admin-badge admin-badge-pending">Offerte verstuurd</span></td>
+                        </tr>
+                        <tr>
+                            <td>#C-46</td>
+                            <td>Bureau Groen</td>
+                            <td>Bedrijfsevent</td>
+                            <td>20 maart 2024</td>
+                            <td>50 personen</td>
+                            <td><span class="admin-badge admin-badge-pending">Nieuw</span></td>
+                        </tr>
+                        <tr>
+                            <td>#C-47</td>
+                            <td>Familie Van den Berg</td>
+                            <td>Bruiloft</td>
+                            <td>25 maart 2024</td>
+                            <td>80 personen</td>
+                            <td><span class="admin-badge admin-badge-success">Bevestigd</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                    <p class="footer-disclaimer">
+                        Dit is een demoversie en alle materiële en intellectuele rechten behoren toe aan 
+                        <a href="https://www.techsolutionsutrecht.nl" target="_blank">TechSolutions Utrecht</a>.
+                    </p>
+                    <p class="footer-copyright">
+                        © 2024 De Lunchkamer. Website door 
+                        <a href="https://www.techsolutionsutrecht.nl" target="_blank">www.techsolutionsutrecht.nl</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#065f46;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#ecfdf5"/>
+  
+  <!-- Calculator -->
+  <rect x="100" y="50" width="120" height="160" rx="10" fill="#1f2937"/>
+  <rect x="110" y="65" width="100" height="30" rx="4" fill="#059669"/>
+  
+  <!-- Calculator buttons -->
+  <rect x="110" y="105" width="25" height="20" rx="2" fill="#4b5563"/>
+  <rect x="140" y="105" width="25" height="20" rx="2" fill="#4b5563"/>
+  <rect x="170" y="105" width="25" height="20" rx="2" fill="#4b5563"/>
+  <rect x="110" y="130" width="25" height="20" rx="2" fill="#4b5563"/>
+  <rect x="140" y="130" width="25" height="20" rx="2" fill="#4b5563"/>
+  <rect x="170" y="130" width="25" height="20" rx="2" fill="#4b5563"/>
+  <rect x="110" y="155" width="55" height="20" rx="2" fill="#fbbf24"/>
+  <rect x="170" y="155" width="25" height="20" rx="2" fill="#4b5563"/>
+  
+  <!-- Euro bills -->
+  <rect x="220" y="100" width="100" height="50" rx="4" fill="url(#green)" transform="rotate(10 270 125)"/>
+  <circle cx="270" cy="125" r="15" fill="#fbbf24" transform="rotate(10 270 125)"/>
+  <text x="270" y="130" text-anchor="middle" fill="#1f2937" font-size="16" font-weight="bold" transform="rotate(10 270 125)">€</text>
+  
+  <rect x="230" y="160" width="100" height="50" rx="4" fill="url(#green)" transform="rotate(-5 280 185)"/>
+  <circle cx="280" cy="185" r="15" fill="#fbbf24" transform="rotate(-5 280 185)"/>
+  <text x="280" y="190" text-anchor="middle" fill="#1f2937" font-size="16" font-weight="bold" transform="rotate(-5 280 185)">€</text>
+  
+  <!-- Decorative circles -->
+  <circle cx="50" cy="50" r="30" fill="#059669" opacity="0.1"/>
+  <circle cx="350" cy="250" r="40" fill="#fbbf24" opacity="0.1"/>
+</svg>

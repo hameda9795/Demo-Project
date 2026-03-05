@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables - Design System */
+:root {
+  --z-cursor: 9999;
+  --z-fab: 100;
+  --z-header: 50;
+  --z-modal: 40;
+}
+
+/* Base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-body text-base text-primary bg-warm-white overflow-x-hidden;
+  }
+  
+  /* Hide default cursor on desktop */
+  @media (pointer: fine) {
+    * {
+      cursor: none !important;
+    }
+  }
+  
+  @media (pointer: coarse) {
+    body {
+      cursor: auto;
+    }
+    .cursor {
+      @apply hidden !important;
+    }
+  }
+  
+  ::selection {
+    @apply bg-accent text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold leading-tight tracking-tight;
+  }
+  
+  a {
+    @apply text-inherit no-underline transition-colors duration-200;
+  }
+  
+  img {
+    @apply max-w-full h-auto block;
+  }
+  
+  address {
+    @apply not-italic;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply w-full max-w-[1400px] mx-auto px-md;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-8 py-4 font-body text-sm font-semibold rounded transition-all duration-300 border-2 border-transparent;
+  }
+  
+  .btn-primary {
+    @apply bg-accent text-white border-accent hover:bg-accent-light hover:border-accent-light hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent text-primary border-primary hover:bg-primary hover:text-white;
+  }
+  
+  .btn-full {
+    @apply w-full;
+  }
+  
+  /* Form styles */
+  .form-group {
+    @apply flex flex-col gap-2;
+  }
+  
+  .form-group label {
+    @apply text-sm font-medium text-primary;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    @apply w-full px-4 py-3.5 border border-stone-light font-body text-base bg-warm-white transition-colors duration-200 rounded-none focus:outline-none focus:border-accent box-border;
+  }
+  
+  .form-group textarea {
+    @apply resize-y min-h-[120px];
+  }
+  
+  /* Section styles */
+  .section {
+    @apply py-2xl relative;
+  }
+  
+  .section-header {
+    @apply mb-xl;
+  }
+  
+  .section-header-centered {
+    @apply text-center;
+  }
+  
+  .section-eyebrow {
+    @apply text-sm font-medium tracking-widest uppercase text-accent block mb-xs;
+  }
+  
+  .section-title {
+    @apply text-3xl leading-tight;
+  }
+  
+  .section-title em {
+    @apply text-accent italic;
+  }
+  
+  /* Scroll reveal */
+  .scroll-reveal {
+    @apply opacity-0 translate-y-8 transition-all duration-700;
+  }
+  
+  .scroll-reveal.revealed {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
